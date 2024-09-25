@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Music Player</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <!-- Main Music Player Panel -->
+    <div class="music-player-container">
+        <div class="top-bar">
+          <button class="menu-btn">☰</button>
+          <h2 class="brand-name"><center>BRAND NAME</center></h2>
+        </div>
+      
+        <div class="album-section">
+          <img src="happier.jpg" alt="Happier Than Ever" class="album-cover">
+          <h2 class="song-title">Happier Than Ever</h2>
+          <p class="artist-name">Billie Eilish</p>
+        </div>
+      
+        <div class="progress-section">
+          <span class="current-time">1:47</span>
+          <input type="range" id="progress-bar" min="0" max="100" value="50">
+          <span class="total-time">3:47</span>
+        </div>
+      
+        <div class="controls">
+          <button class="control-btn">🔁</button>
+          <button class="control-btn">⏮</button>
+          <button class="control-btn">▶️</button>
+          <button class="control-btn">⏭</button>
+          <button class="control-btn">🔀</button>
+        </div>
+
+        <!-- Volume Control -->
+        <div class="volume-control">
+          <label for="volume-bar">Volume:</label>
+          <input type="range" id="volume-bar" min="0" max="100" value="50">
+        </div>
+      
+        <div class="up-next-section">
+          <img src="badguy.jpg" alt="Next Song" class="next-song-cover">
+          <div class="up-next-info">
+            <p class="next-song-title">Bad Guy</p>
+            <p class="next-artist-name">Billie Eilish</p>
+          </div>
+          <button class="up-next-btn">Up next</button>
+        </div>
+    </div>
+
+    <!-- Sidebar for Playlist Songs -->
+    <div class="sidebar-right">
+      <div class="playlist-header">
+        <h2>Playlists</h2>
+        <button class="create-playlist-btn">CREATE PLAYLIST</button>
+      </div>
+
+      <!-- Search Bar for Music -->
+      <div class="search-section">
+        <input type="text" class="search-bar" placeholder="Search for songs...">
+        <button class="search-btn">🔍</button>
+      </div>
+
+      <!-- Music Categories for Filtering -->
+      <div class="filter-section">
+        <select class="filter-dropdown" id="filter-genre">
+          <option value="all">All Genres</option>
+          <option value="pop">Pop</option>
+          <option value="rock">Rock</option>
+          <option value="hiphop">Hip-Hop</option>
+          <option value="jazz">Jazz</option>
+        </select>
+
+        <select class="filter-dropdown" id="filter-artist">
+          <option value="all">All Artists</option>
+          <option value="billie">Billie Eilish</option>
+          <option value="taylor">Taylor Swift</option>
+          <option value="drake">Drake</option>
+        </select>
+      </div>
+
+      <ul class="playlist-list">
+        <li class="playlist-item">
+          <i class="icon heart-icon">❤️</i>
+          <div class="playlist-details">
+            <p class="playlist-name">Favorites</p>
+            <p class="playlist-count">8 songs</p>
+          </div>
+          <button class="more-options-btn">⋮</button>
+        </li>
+
+        <li class="playlist-item">
+          <i class="icon music-icon">🎵</i>
+          <div class="playlist-details">
+            <p class="playlist-name">T.S.S.2</p>
+            <p class="playlist-count">5 songs</p>
+          </div>
+          <button class="more-options-btn">⋮</button>
+        </li>
+
+        <li class="playlist-item">
+          <i class="icon music-icon">🎵</i>
+          <div class="playlist-details">
+            <p class="playlist-name">Rock</p>
+            <p class="playlist-count">4 songs</p>
+          </div>
+          <button class="more-options-btn">⋮</button>
+        </li>
+
+        <!-- Add more playlist items here -->
+      </ul>
+
+      <div class="now-playing">
+        <div class="now-playing-details">
+          <p class="now-playing-song">Song 5</p>
+          <p class="now-playing-artist">Artist 1</p>
+        </div>
+        <button class="now-playing-btn">▶️</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
